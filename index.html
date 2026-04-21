@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Woflystars</title>
+
+  <!-- Fancy font -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
@@ -11,6 +15,7 @@
       background: linear-gradient(180deg, #000000, #0a1a2f);
       color: white;
     }
+
     header {
       display: flex;
       justify-content: space-between;
@@ -18,28 +23,62 @@
       padding: 20px;
       background: rgba(0,0,0,0.8);
     }
+
     nav a {
       color: #4da6ff;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
+
     nav a:hover {
       color: white;
     }
+
     .hero {
       text-align: center;
-      padding: 50px 20px;
+      padding: 60px 20px;
     }
+
+    /* 🌟 BIG PRETTY TITLE */
+    .hero h2 {
+      font-family: "Dancing Script", cursive;
+      font-size: 72px;
+      margin: 0;
+      background: linear-gradient(90deg, #4da6ff, #ffffff, #9b5cff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 20px rgba(77,166,255,0.4);
+      animation: glow 3s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px rgba(77,166,255,0.3);
+      }
+      to {
+        text-shadow: 0 0 25px rgba(155,92,255,0.6);
+      }
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+
     .hero img {
       max-width: 90%;
+      margin-top: 25px;
       border-radius: 20px;
       box-shadow: 0 0 20px #4da6ff;
     }
+
     .section {
       padding: 40px 20px;
       text-align: center;
     }
+
     .btn {
       display: inline-block;
       margin: 10px;
@@ -50,9 +89,11 @@
       text-decoration: none;
       font-weight: bold;
     }
+
     .btn:hover {
       background: white;
     }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -60,6 +101,7 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -74,7 +116,7 @@
 <section id="home" class="hero">
   <h2>Welcome to Woflystars</h2>
   <p>Music • Story • Vibe</p>
- <img src="woflystars.png">
+  <img src="woflystars.png">
 </section>
 
 <section id="music" class="section">
