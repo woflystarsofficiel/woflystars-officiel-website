@@ -2,97 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Woflystars</title>
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #000000, #0a1a2f);
+      background: #0f0f0f;
       color: white;
+      text-align: center;
     }
+
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       padding: 20px;
-      background: rgba(0,0,0,0.8);
+      background: #111;
     }
-    nav a {
-      color: #4da6ff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      color: white;
-    }
-    .hero {
-      text-align: center;
-      padding: 50px 20px;
-    }
-    .hero img {
-      max-width: 90%;
-      border-radius: 20px;
-      box-shadow: 0 0 20px #4da6ff;
-    }
-    .section {
+
+    section {
       padding: 40px 20px;
-      text-align: center;
     }
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 25px;
-      background: #4da6ff;
-      color: black;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
+
+    img {
+      max-width: 300px;
+      border-radius: 15px;
+      margin-top: 15px;
     }
-    .btn:hover {
-      background: white;
+
+    iframe {
+      margin-top: 20px;
+      max-width: 100%;
+      border-radius: 10px;
     }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: rgba(0,0,0,0.8);
+
+    .hero {
+      padding-top: 60px;
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>Woflystars</h1>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#music">Music</a>
-    <a href="#links">Links</a>
-  </nav>
-</header>
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <h2>Welcome to Woflystars</h2>
+    <p>Music • Story • Vibe</p>
 
-<section id="home" class="hero">
-  <h2>Welcome to Woflystars</h2>
-  <p>Music • Story • Vibe</p>
-<img src="woflystars/woflystars.png">
-</section> 
+    <img src="woflystars/woflystars.png" alt="Woflystars Image">
 
-<section id="music" class="section">
-  <h2>My Music</h2>
-  <p>Listen to my songs on YouTube:</p>
-  <a class="btn" href="https://youtube.com/@woflystars.officiell?si=i-nGlwxtcFIlt9k_" target="_blank">YouTube</a>
-</section>
+    <br>
 
-<section id="links" class="section">
-  <h2>Follow & Support</h2>
-  <a class="btn" href="https://www.instagram.com/woflystars_officiel" target="_blank">Instagram</a>
-  <a class="btn" href="https://www.tiktok.com/@haru_haru_j.01_" target="_blank">TikTok</a>
-  <a class="btn" href="https://woflystars-off.printify.me" target="_blank">Merch Shop</a>
-</section>
+    <!-- YouTube Video -->
+    <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/VIDEO_ID"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </section>
 
-<footer>
-  <p>© 2026 Woflystars</p>
-</footer>
+  <!-- VIDEOS SECTION (optional extra) -->
+  <section id="videos">
+    <h2>More Videos</h2>
+
+    <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/VIDEO_ID"
+      title="YouTube video player"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+
+  </section>
 
 </body>
 </html>
