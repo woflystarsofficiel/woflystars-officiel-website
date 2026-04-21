@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=2.0">
   <title>Woflystars</title>
 
-  <!-- Fancy font -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
   <style>
@@ -14,6 +13,7 @@
       font-family: Arial, sans-serif;
       background: linear-gradient(180deg, #000000, #0a1a2f);
       color: white;
+      cursor: none; /* hide default cursor */
     }
 
     header {
@@ -40,7 +40,6 @@
       padding: 60px 20px;
     }
 
-    /* 🌟 BIG PRETTY TITLE */
     .hero h2 {
       font-family: "Dancing Script", cursive;
       font-size: 72px;
@@ -49,16 +48,6 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-shadow: 0 0 20px rgba(77,166,255,0.4);
-      animation: glow 3s infinite alternate;
-    }
-
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 10px rgba(77,166,255,0.3);
-      }
-      to {
-        text-shadow: 0 0 25px rgba(155,92,255,0.6);
-      }
     }
 
     .hero p {
@@ -99,10 +88,37 @@
       padding: 20px;
       background: rgba(0,0,0,0.8);
     }
+
+    /* 🦋 Butterfly cursor */
+    #cursor {
+      width: 45px;
+      height: 45px;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+
+      background-image: url("butterfly.png"); /* your blue butterfly */
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      transform: translate(-50%, -50%);
+      animation: flap 0.2s infinite;
+    }
+
+    /* 🪽 wing flap animation */
+    @keyframes flap {
+      0%   { transform: translate(-50%, -50%) scale(1) rotate(-5deg); }
+      50%  { transform: translate(-50%, -50%) scale(1.1) rotate(5deg); }
+      100% { transform: translate(-50%, -50%) scale(1) rotate(-5deg); }
+    }
+
   </style>
 </head>
 
 <body>
+
+<!-- 🦋 custom cursor -->
+<div id="cursor"></div>
 
 <header>
   <h1>Woflystars</h1>
@@ -135,6 +151,15 @@
 <footer>
   <p>© 2026 Woflystars</p>
 </footer>
+
+<!-- 🦋 cursor movement script -->
+<script>
+document.addEventListener("mousemove", (e) => {
+  const cursor = document.getElementById("cursor");
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
+</script>
 
 </body>
 </html>
